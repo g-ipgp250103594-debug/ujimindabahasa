@@ -1,0 +1,33 @@
+<script>
+
+function papar() {
+    const contoh = document.getElementById("contoh");
+
+    if (contoh.style.display === "none") {
+        contoh.style.display = "block";
+    } else {
+        contoh.style.display = "none";
+    }
+}
+
+function semak() {
+
+    const jawapan = document.querySelector('input[name="quiz"]:checked');
+
+    if (!jawapan) {
+        document.getElementById("markah").innerHTML =
+        "⚠️ Sila pilih satu jawapan dahulu.";
+        return;
+    }
+
+    if (jawapan.value === "2") {
+        document.getElementById("markah").innerHTML =
+        "🎉 Tahniah! Jawapan anda betul!";
+    } else {
+        document.getElementById("markah").innerHTML =
+        "😊 Jawapan kurang tepat. Cuba lagi!";
+    }
+
+}
+
+</script>
